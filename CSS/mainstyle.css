@@ -1,0 +1,90 @@
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px auto 50px;
+    grid-template-areas: "header" "main" "footer";
+    background-color: black;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+}
+
+h1{
+    color: wheat;
+    text-decoration: underline;
+}
+
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav a{
+    text-decoration: none;
+    color: wheat;
+    
+    margin: 20px;
+    font-size: x-large;
+}
+
+main{
+    grid-area: main;
+    
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: wheat;
+    text-align: center;
+}
+
+main article{
+    margin: 20px;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    color: wheat;
+    position: absolute;
+    bottom: 0;
+    
+    right: 0;
+}
+
+.config{
+    margin-top: 200px;
+}
+
+.configimg{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+.configp{
+    text-align: center;
+    font-size: 17px;
+}
+
+.answers article{
+    width: 100%;
+    height: fit-content;
+    background-color: wheat;
+    color: black;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+
+

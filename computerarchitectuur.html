@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href = "css/mainstyle.css">
+    <title>Computer Architectuur</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="config/configuration.html">Virtuele Machine</a>
+                </li>
+                <li>
+                    <a href ="computerarchitectuur.html">Computer Architectuur</a>
+                </li>
+                <li>
+                    <a href ="gdpr.html">GDPR</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>Pieter Van Canneyt</h1>
+    </header>
+    <main class="answers">
+        <h1>Computer Architectuur</h1>
+        <article>
+            <h2>1. Leg uit: wat is een page fault en wat is het verband met thrashing?</h2>
+            <p>
+                Bij het inladen van een proces in het geheugen wordt er gewerkt met paging. Bij paging wordt het fysieke geheugen opgesplitst in blokken van gelijke grootte,
+                die worden frames genoemd. het logische geheugen wordt ook in gelijke blokken verdeeld, pages genaamd.
+                Een proces heeft echter niet altijd alle pages nodig om te werken. Daarom bestaat er iets als Demand Paging, waarbij enkel de nodige pages in het geheugen worden gebracht.
+            </p>
+            <p>
+                Een page Fault gebeurt wanneer een page die nodig is niet kan teruggevonden worden in het geheugen en dus niet geswappet is.
+                Hierdoor moet een I/O-Operatie ingepland worden zodat de nodige page kan ingeladen worden in het geheugen. Als deze Page Faults te vaak voorkomen,
+                dan spreken we van thrashing. De CPU wordt te veel belast met I/O-Operaties. Het kan niet meer efficiënt werken, waardoor de prestaties van het systeem drastisch verminderen.
+            </p>
+        </article>
+        <article>
+            <h2>2. Een proces is niet hetzelfde als een programma. Wat is het verschil? Kan je een voorbeeld geven?</h2>
+            <p>Een programma is een groep instructies die een bepaalde taak moeten uitvoeren. Een proces is een programma die in uitvoering is. Een proces is actief,
+                een programma is passief. het wordt passief genoemd omdat het geen actie onderneemt op zichzelf, maar het moet eerst uitgevoerd worden.
+                Het moet een proces worden. Een programma staat op de schijf als een executable. Om uitgevoerd te kunnen worden moet het een 'logical address space' krijgen
+                zoals een proces dat heeft ("base address" tot aan "base + limit").
+            </p>
+            <p>Als ik een spel installeer op mijn pc, dan installeer ik eigenlijk het programma op mijn harde schijf. Ik geef het een plaats van waaruit ik het kan bereiken.
+                Als ik het uitvoer, dan wordt het spel actief. Het wordt dus omgezet in een proces waardoor ik het kan gebruiken.
+            </p>
+            <p>(info: <a href="https://techdifferences.com/difference-between-program-and-process.html">https://techdifferences.com/difference-between-program-and-process.html</a>)</p>
+        </article>
+        <article>
+            <h2>3. Wat is een Interrupt Request? Licht toe aan de hand van een voorbeeld.</h2>
+            <p> Als een apparaat gegevens wil versturen naar de processor, dan gaat dat niet zomaar. De processor is constant gegevens aan het verwerken van andere apparaten.
+                Daarom krijgt ieder apparaat een IRQ nummer. Dit is een uniek nummer per apparaat.
+            </p>
+            <p>
+                Het apparaat verstuurt dit nummer naar de processor als hij bijvoorbeeld gegevens kan ontvangen of als hij bijvoorbeeld klaar is met zijn opdracht.
+            </p>
+            <p>
+                Het is de processor die beslist wanneer het apparaat gegevens kan zenden naar de processor. Maar eerst moet het apparaat wel een aanvraag indienen daarvoor bij de processor.
+                Dit noemt men dan een Interrupt Request. Als de processor beslist dat het apparaat zijn gegevens kan doorsturen, dan geeft de processor eigenlijk de toelating
+                aan het apparaat om de I/O-Bus te gebruiken.
+            </p>
+            <p>
+                Voorbeeld: als een computermuis een klik heeft uigevoerd, dan stuurt hij een Interrupt Request naar de processor. Als deze de Request aanvaardt
+                dan kan de muis zijn gegevens doorgeven aan de processor lang de I/-Bus. Zo kan hij de processor vertellen waar hij geklikt heeft.
+            </p>
+
+        </article>
+        <article>
+            <h2>
+                4. Welk component van de CPU staat in voor het maken van logische beslissingen?
+            </h2>
+            <p>
+                Het is de taak van de Arithmetic and Logical Unit (ALU) om rekenkundige en logische bewerkingen uit te voeren. Na de bewerking worden de resultaten opgeslagen in een geheugen.
+            </p>
+
+        </article>
+        <article>
+            <h2>
+                5. Geef minsten 2 voor- en 2 nadelen van flash drives.
+            </h2>
+            <p>
+                Een flash drive is klein en handig om mee te nemen. Het is ook heel sterk: je kan het laten vallen of er op gaat staan (zolang hij maar niet volledig vernield
+                is, waardoor de connectors beschadigd raken). Het is ook veel goedkoper dan bijvoorbeeld harde schijven.
+            </p>
+            <p>
+                Een nadeel van een flash drive is dat als je hem te veel gebruikt, de levensduur sterk vermindert. De hardware waarme je de flash drive in de usb poort steekt
+                is gemaakt om 1500 keer gebruikt te kunnen worden. Dus hoe meer je hem gebruikt, hoe korter de levensduur wordt.
+            </p>
+            <p>
+                Hoewel een flash drive geen groot risico loopt om geheckt te worden, is er toch een risico om malware binnen te halen. 
+                Als je de flash drive koppelt aan een computer waar er malware opstaat, dan kan de malware op de flash drive terecht komen. Zo kan het gebeuren dat de 
+                bestanden die er op staat corrupt geraken. En als de eigenaar van de flash drive er niet van op de hoogte is, kan de malware zich eventueel nog verder verspreiden over andere toestellen.
+            </p>
+            <p>(info: <a href="https://www.cybrary.it/blog/2018/05/pros-and-cons-of-usb-flash-drives">https://www.cybrary.it/blog/2018/05/pros-and-cons-of-usb-flash-drives</a></p>
+        </article>
+    </main>
+    <footer>
+        <p>
+            &copy; Howest 2020
+        </p>
+    </footer>
+    
+</body>
+</html>
